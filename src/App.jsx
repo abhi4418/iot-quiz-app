@@ -164,6 +164,16 @@ export default function App() {
     setShowQuestionGrid(!showQuestionGrid);
   };
 
+  // Toggle marked question
+  const toggleMarkedQuestion = (index) => {
+    const isMarked = markedQuestions.includes(index);
+    if (isMarked) {
+      setMarkedQuestions(markedQuestions.filter(q => q !== index));
+    } else {
+      setMarkedQuestions([...markedQuestions, index]);
+    }
+  };
+
   // Handle keyboard navigation
   const handleKeyDown = useCallback((event) => {
     if (showResult) return; // Don't handle keys on result screen
@@ -257,13 +267,21 @@ export default function App() {
   const getQuestionGridItemStyle = (index) => {
     const status = getQuestionStatus(index);
     const isCurrentQuestion = index === currentQuestion;
+    const isMarked = markedQuestions.includes(index);
+    
+    let styles = isCurrentQuestion ? 'ring-2 ring-blue-500 ' : '';
+    
+    // Add star/mark indicator if question is marked
+    if (isMarked) {
+      styles += 'border-2 border-yellow-500 ';
+    }
     
     if (status === "correct") {
-      return `${isCurrentQuestion ? 'ring-2 ring-blue-500' : ''} bg-green-100 border-green-500 text-green-800`;
+      return `${styles}bg-green-100 border-green-500 text-green-800`;
     } else if (status === "incorrect") {
-      return `${isCurrentQuestion ? 'ring-2 ring-blue-500' : ''} bg-red-100 border-red-500 text-red-800`;
+      return `${styles}bg-red-100 border-red-500 text-red-800`;
     } else {
-      return `${isCurrentQuestion ? 'ring-2 ring-blue-500' : ''} bg-gray-100 border-gray-300 text-gray-800`;
+      return `${styles}bg-gray-100 border-gray-300 text-gray-800`;
     }
   };
 
@@ -281,12 +299,21 @@ export default function App() {
               </div>
               <div className="flex justify-between mb-4">
                 <span className="text-gray-600">Question {currentQuestion + 1}/{quizData.length}</span>
-                <button 
-                  className="text-blue-500 hover:text-blue-700"
-                  onClick={toggleQuestionGrid}
-                >
-                  {showQuestionGrid ? 'Hide Grid' : 'Show Question Grid'}
-                </button>
+                <div className="flex space-x-2">
+                  <button 
+                    className="text-blue-500 hover:text-blue-700"
+                    onClick={() => handleShuffleQuiz()}
+                    title="Shuffle quiz questions"
+                  >
+                    🔀 Shuffle
+                  </button>
+                  <button 
+                    className="text-blue-500 hover:text-blue-700"
+                    onClick={toggleQuestionGrid}
+                  >
+                    {showQuestionGrid ? 'Hide Grid' : 'Show Grid'}
+                  </button>
+                </div>
               </div>
               <div className="h-2 w-full bg-gray-200 rounded-full">
                 <div 
@@ -312,7 +339,7 @@ export default function App() {
                     </button>
                   ))}
                 </div>
-                <div className="mt-2 flex justify-center space-x-4 text-xs">
+                <div className="mt-2 flex justify-center space-x-4 text-xs flex-wrap">
                   <div className="flex items-center">
                     <div className="w-3 h-3 bg-green-100 border border-green-500 rounded-full mr-1"></div>
                     <span>Correct</span>
@@ -324,6 +351,10 @@ export default function App() {
                   <div className="flex items-center">
                     <div className="w-3 h-3 bg-gray-100 border border-gray-300 rounded-full mr-1"></div>
                     <span>Unattempted</span>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-3 h-3 border-2 border-yellow-500 rounded-full mr-1"></div>
+                    <span>Marked</span>
                   </div>
                 </div>
               </div>
@@ -346,15 +377,23 @@ export default function App() {
             </div>
 
             <div className="flex flex-col space-y-3">
-              <div className="flex justify-between">
-                <button
-                  className={`bg-gray-300 text-gray-700 py-2 px-6 rounded-lg hover:bg-gray-400 transition-colors ${currentQuestion === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
-                  onClick={handlePreviousQuestion}
-                  disabled={currentQuestion === 0}
-                >
-                  ← Previous
-                </button>
-                
+              <div className="flex justify-between items-center">
+                <div className="flex space-x-2">
+                  <button
+                    className={`bg-gray-300 text-gray-700 py-2 px-6 rounded-lg hover:bg-gray-400 transition-colors ${currentQuestion === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+                    onClick={handlePreviousQuestion}
+                    disabled={currentQuestion === 0}
+                  >
+                    ← Previous
+                  </button>
+                  <button
+                    className={`py-2 px-4 rounded-lg transition-colors ${markedQuestions.includes(currentQuestion) ? 'bg-yellow-100 text-yellow-700 hover:bg-yellow-200 border border-yellow-400' : 'bg-gray-200 hover:bg-gray-300 text-gray-700'}`}
+                    onClick={() => toggleMarkedQuestion(currentQuestion)}
+                    title={markedQuestions.includes(currentQuestion) ? "Unmark this question" : "Mark this question for later review"}
+                  >
+                    {markedQuestions.includes(currentQuestion) ? "★ Marked" : "☆ Mark"}
+                  </button>
+                </div>
                 <button
                   className="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600 transition-colors disabled:bg-gray-300 disabled:cursor-not-allowed"
                   onClick={handleNextQuestion}
@@ -423,6 +462,10 @@ export default function App() {
                 <div className="flex items-center">
                   <div className="w-3 h-3 bg-gray-100 border border-gray-300 rounded-full mr-1"></div>
                   <span>Unattempted</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-3 h-3 border-2 border-yellow-500 rounded-full mr-1"></div>
+                  <span>Marked</span>
                 </div>
               </div>
             </div>
