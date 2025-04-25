@@ -15,12 +15,33 @@ export default function App() {
   const [userAnswers, setUserAnswers] = useState([]);
   const [isAnswerSubmitted, setIsAnswerSubmitted] = useState(false);
   const [showQuestionGrid, setShowQuestionGrid] = useState(false);
+  const [markedQuestions, setMarkedQuestions] = useState([]);  // Add state for marked questions
 
-  // Function to shuffle quiz data
+  // Function to load quiz data without shuffling
   useEffect(() => {
+    // Use original order of questions by default
+    setQuizData([...sampleQuizData]);
+  }, []);
+  
+  // Function to shuffle quiz data when requested
+  const handleShuffleQuiz = () => {
+    // Reset quiz state
+    setCurrentQuestion(0);
+    setSelectedOption("");
+    setScore(0);
+    setShowExplanation(false);
+    setIsAnswerChecked(false);
+    setIsCorrect(false);
+    
+    // Shuffle the questions
     const shuffledQuizData = [...sampleQuizData].sort(() => Math.random() - 0.5);
     setQuizData(shuffledQuizData);
-  }, []);
+    
+    // Reset user answers
+    setUserAnswers(new Array(shuffledQuizData.length).fill(""));
+    setIsAnswerSubmitted(false);
+    setShowQuestionGrid(false);
+  };
 
   // Handle option selection
   const handleOptionSelect = (option) => {
