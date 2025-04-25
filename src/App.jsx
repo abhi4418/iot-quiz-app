@@ -16,6 +16,7 @@ export default function App() {
   const [isAnswerSubmitted, setIsAnswerSubmitted] = useState(false);
   const [showQuestionGrid, setShowQuestionGrid] = useState(false);
   const [markedQuestions, setMarkedQuestions] = useState([]);  // Add state for marked questions
+  const [reviewMode, setReviewMode] = useState(false); // Add state for review mode
 
   // Function to load quiz data without shuffling
   useEffect(() => {
@@ -41,29 +42,46 @@ export default function App() {
     setUserAnswers(new Array(shuffledQuizData.length).fill(""));
     setIsAnswerSubmitted(false);
     setShowQuestionGrid(false);
+    setReviewMode(false); // Reset review mode as well
   };
 
   // Handle option selection
   const handleOptionSelect = (option) => {
+    // If we're in review mode after quiz completion, don't allow changing answers
+    if (reviewMode) {
+      return;
+    }
+    
     setSelectedOption(option);
     setIsAnswerChecked(true);
     setIsAnswerSubmitted(true);
     
     // Save the selected answer
     const updatedUserAnswers = [...userAnswers];
+    
+    // Fix scoring system - only update score if this is a new answer or changing an answer
+    const isNewAnswer = !updatedUserAnswers[currentQuestion];
+    const previousAnswer = updatedUserAnswers[currentQuestion];
+    const isCorrectAnswer = option === quizData[currentQuestion].correct;
+    const wasCorrectAnswer = previousAnswer === quizData[currentQuestion].correct;
+    
+    // Update the user answer
     updatedUserAnswers[currentQuestion] = option;
     setUserAnswers(updatedUserAnswers);
     
     // Check if answer is correct
-    const correct = option === quizData[currentQuestion].correct;
-    setIsCorrect(correct);
+    setIsCorrect(isCorrectAnswer);
     
-    // Update score if answer was correct
-    if (correct && !userAnswers[currentQuestion]) {
-      setScore(score + 1);
-    } else if (!correct && userAnswers[currentQuestion] === quizData[currentQuestion].correct) {
-      // Deduct score if changing from correct to incorrect
-      setScore(score - 1);
+    // Update score based on answer change logic
+    if (isNewAnswer && isCorrectAnswer) {
+      // New correct answer
+      setScore(prevScore => prevScore + 1);
+    } else if (!isNewAnswer && wasCorrectAnswer && !isCorrectAnswer) {
+      // Changed from correct to incorrect
+      setScore(prevScore => prevScore - 1);
+    } else if (!isNewAnswer && !wasCorrectAnswer && isCorrectAnswer) {
+      // Changed from incorrect to correct
+      setScore(prevScore => prevScore + 1);
     }
     
     // Show explanation for all answers, whether correct or incorrect
@@ -94,6 +112,14 @@ export default function App() {
         setIsCorrect(false);
       }
     } else {
+      // Recalculate final score before showing results to ensure accuracy
+      let finalScore = 0;
+      userAnswers.forEach((answer, index) => {
+        if (answer === quizData[index].correct) {
+          finalScore++;
+        }
+      });
+      setScore(finalScore);
       setShowResult(true);
     }
   };
@@ -176,11 +202,11 @@ export default function App() {
 
   // Handle keyboard navigation
   const handleKeyDown = useCallback((event) => {
-    if (showResult) return; // Don't handle keys on result screen
+    if (showResult && !reviewMode) return; // Don't handle keys on result screen unless in review mode
     
     switch(event.key) {
       case "ArrowRight":
-        if (selectedOption) handleNextQuestion();
+        if (selectedOption || reviewMode) handleNextQuestion();
         break;
       case "ArrowLeft":
         handlePreviousQuestion();
@@ -191,7 +217,7 @@ export default function App() {
       default:
         break;
     }
-  }, [showResult, selectedOption, handleNextQuestion, handlePreviousQuestion, toggleQuestionGrid]);
+  }, [showResult, selectedOption, reviewMode, handleNextQuestion, handlePreviousQuestion, toggleQuestionGrid]);
 
   // Setup keyboard event listeners
   useEffect(() => {
@@ -221,6 +247,58 @@ export default function App() {
     setUserAnswers(new Array(shuffledQuizData.length).fill(""));
     setIsAnswerSubmitted(false);
     setShowQuestionGrid(false);
+    setReviewMode(false); // Exit review mode when restarting
+  };
+  
+  // Start review mode to revisit questions after quiz completion
+  const startReviewMode = () => {
+    setReviewMode(true);
+    setShowResult(false);
+    
+    // If there are marked questions, go to the first one
+    if (markedQuestions.length > 0) {
+      setCurrentQuestion(markedQuestions[0]);
+    } else {
+      setCurrentQuestion(0);
+    }
+    
+    // Restore the selected answer for the current question
+    if (userAnswers[currentQuestion]) {
+      setSelectedOption(userAnswers[currentQuestion]);
+      const correct = userAnswers[currentQuestion] === quizData[currentQuestion].correct;
+      setIsCorrect(correct);
+      setIsAnswerChecked(true);
+      setShowExplanation(true); // Always show explanation in review mode
+    }
+  };
+  
+  // Return to results page from review mode
+  const returnToResults = () => {
+    setReviewMode(false);
+    setShowResult(true);
+  };
+
+  // Handle submit quiz at any point
+  const handleSubmitQuiz = () => {
+    // Ask for confirmation before submitting
+    const unansweredQuestions = userAnswers.filter(answer => !answer).length;
+    let confirmMessage = "Are you sure you want to submit the quiz now?";
+    
+    if (unansweredQuestions > 0) {
+      confirmMessage = `You have ${unansweredQuestions} unanswered ${unansweredQuestions === 1 ? 'question' : 'questions'}. Are you sure you want to submit the quiz?`;
+    }
+    
+    if (window.confirm(confirmMessage)) {
+      // Calculate final score
+      let finalScore = 0;
+      userAnswers.forEach((answer, index) => {
+        if (answer === quizData[index].correct) {
+          finalScore++;
+        }
+      });
+      setScore(finalScore);
+      setShowResult(true);
+    }
   };
 
   // Show explanation
@@ -235,8 +313,8 @@ export default function App() {
 
   // Helper function to get option style
   const getOptionStyle = (option) => {
-    // If answer has been checked
-    if (isAnswerChecked) {
+    // If answer has been checked or if in review mode
+    if (isAnswerChecked || reviewMode) {
       // Correct answer is always highlighted in green
       if (option === quizData[currentQuestion].correct) {
         return "bg-green-100 border-green-500 text-green-800";
@@ -300,19 +378,30 @@ export default function App() {
               <div className="flex justify-between mb-4">
                 <span className="text-gray-600">Question {currentQuestion + 1}/{quizData.length}</span>
                 <div className="flex space-x-2">
-                  <button 
-                    className="text-blue-500 hover:text-blue-700"
-                    onClick={() => handleShuffleQuiz()}
-                    title="Shuffle quiz questions"
-                  >
-                    🔀 Shuffle
-                  </button>
+                  {!reviewMode && (
+                    <button 
+                      className="text-blue-500 hover:text-blue-700"
+                      onClick={() => handleShuffleQuiz()}
+                      title="Shuffle quiz questions"
+                    >
+                      🔀 Shuffle
+                    </button>
+                  )}
                   <button 
                     className="text-blue-500 hover:text-blue-700"
                     onClick={toggleQuestionGrid}
                   >
                     {showQuestionGrid ? 'Hide Grid' : 'Show Grid'}
                   </button>
+                  {reviewMode && (
+                    <button 
+                      className="text-blue-500 hover:text-blue-700"
+                      onClick={returnToResults}
+                      title="Return to results page"
+                    >
+                      Results Page
+                    </button>
+                  )}
                 </div>
               </div>
               <div className="h-2 w-full bg-gray-200 rounded-full">
@@ -387,37 +476,53 @@ export default function App() {
                     ← Previous
                   </button>
                   <button
-                    className={`py-2 px-4 rounded-lg transition-colors ${markedQuestions.includes(currentQuestion) ? 'bg-yellow-100 text-yellow-700 hover:bg-yellow-200 border border-yellow-400' : 'bg-gray-200 hover:bg-gray-300 text-gray-700'}`}
+                    className={`py-2 px-4 rounded-lg transition-all ${
+                      markedQuestions.includes(currentQuestion) 
+                        ? 'bg-yellow-300 text-yellow-800 hover:bg-yellow-400 border-2 border-yellow-500 font-medium shadow-md transform scale-105' 
+                        : 'bg-gray-200 hover:bg-gray-300 text-gray-700'
+                    }`}
                     onClick={() => toggleMarkedQuestion(currentQuestion)}
                     title={markedQuestions.includes(currentQuestion) ? "Unmark this question" : "Mark this question for later review"}
                   >
-                    {markedQuestions.includes(currentQuestion) ? "★ Marked" : "☆ Mark"}
+                    {markedQuestions.includes(currentQuestion) ? "⭐ Marked" : "☆ Mark"}
                   </button>
                 </div>
-                <button
-                  className="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600 transition-colors disabled:bg-gray-300 disabled:cursor-not-allowed"
-                  onClick={handleNextQuestion}
-                  disabled={!selectedOption}
-                >
-                  {currentQuestion < quizData.length - 1 ? "Next →" : "Finish Quiz"}
-                </button>
+                <div className="flex space-x-2">
+                  {!reviewMode && (
+                    <button
+                      className="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 transition-colors"
+                      onClick={handleSubmitQuiz}
+                      title="Submit quiz and see your final score"
+                    >
+                      Submit Quiz
+                    </button>
+                  )}
+                  <button
+                    className="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600 transition-colors disabled:bg-gray-300 disabled:cursor-not-allowed"
+                    onClick={handleNextQuestion}
+                    disabled={!selectedOption && !reviewMode}
+                  >
+                    {currentQuestion < quizData.length - 1 ? "Next →" : "Finish Quiz"}
+                  </button>
+                </div>
               </div>
               
               <div className="mt-3 text-center text-sm text-gray-500">
                 <p>Use ← → arrow keys to navigate between questions</p>
                 <p>Press 'g' to toggle question grid</p>
+                {reviewMode && <p className="text-blue-600 font-medium">Review Mode - Answers cannot be changed</p>}
               </div>
               
-              {isAnswerChecked && isCorrect && (
+              {isAnswerChecked && isCorrect && !reviewMode && (
                 <div className="mt-2 p-3 bg-green-50 border border-green-100 rounded-lg">
                   <p className="text-green-700 font-medium">Correct answer!</p>
                 </div>
               )}
               
-              {showExplanation && (
+              {(showExplanation || reviewMode) && (
                 <div className="mt-2 p-3 bg-blue-50 border border-blue-100 rounded-lg">
                   <p className="text-gray-700">
-                    {isCorrect ? "" : <span className="block font-medium text-red-700 mb-1">Incorrect! The correct answer is: {quizData[currentQuestion].correct}</span>}
+                    {!isCorrect && <span className="block font-medium text-red-700 mb-1">Incorrect! The correct answer is: {quizData[currentQuestion].correct}</span>}
                     <span className="font-medium">Explanation: </span>{quizData[currentQuestion].explanation}
                   </p>
                 </div>
@@ -470,12 +575,41 @@ export default function App() {
               </div>
             </div>
             
-            <button
-              className="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600 transition-colors"
-              onClick={handleRestartQuiz}
-            >
-              Restart Quiz
-            </button>
+            {/* Marked Questions Summary */}
+            {markedQuestions.length > 0 && (
+              <div className="mb-6 p-3 border border-gray-200 rounded-lg bg-gray-50">
+                <h3 className="text-md font-medium mb-2">You marked {markedQuestions.length} question(s) for review:</h3>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  {markedQuestions.map((index) => (
+                    <span key={index} className="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">
+                      Question {index + 1}
+                    </span>
+                  ))}
+                </div>
+                <button
+                  onClick={startReviewMode}
+                  className="mt-3 bg-yellow-500 text-white py-2 px-4 rounded-lg hover:bg-yellow-600 transition-colors"
+                >
+                  Review Marked Questions
+                </button>
+              </div>
+            )}
+            
+            <div className="flex flex-wrap gap-3 justify-center">
+              <button
+                className="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600 transition-colors"
+                onClick={handleRestartQuiz}
+              >
+                Restart Quiz
+              </button>
+              
+              <button
+                className="bg-green-500 text-white py-2 px-6 rounded-lg hover:bg-green-600 transition-colors"
+                onClick={startReviewMode}
+              >
+                Review All Questions
+              </button>
+            </div>
           </div>
         )}
       </div>
