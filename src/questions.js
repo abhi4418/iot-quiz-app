@@ -1550,14 +1550,14 @@ export const sampleQuizData = [
   explanation: "The two most relevant sensors directly used in agriculture are Soil moisture and water level sensor."
 },
 {
-  question: "Examples of dispersion measures include _______ and ______.",
+  question: "Suppose that your smartphone tilts by an angle of 15 degrees. Which among the following sensors will detect this tilt?",
   options: [
-    "Discrete, categorical",
-    "Continuous, quantitative",
-    "Discrete, quantitative",
-    "Range, Variance"
+    "HC-SR04",
+    "Gyroscope",
+    "Accelerometer",
+    "Monometer"
   ],
-  correct: "Range, Variance",
-  explanation: "Examples of dispersion measures include Range and Variance."
+  correct: "Gyroscope",
+  explanation: "A gyroscope is used to detect the angular tilt or rotation of a device, making it suitable for detecting a 15-degree tilt in a smartphone."
 }
 ]
