@@ -45,12 +45,8 @@ export default function App() {
       setScore(score - 1);
     }
     
-    // Show explanation automatically if the answer is wrong
-    if (!correct) {
-      setShowExplanation(true);
-    } else {
-      setShowExplanation(false);
-    }
+    // Show explanation for all answers, whether correct or incorrect
+    setShowExplanation(true);
   };
 
   // Handle next question
