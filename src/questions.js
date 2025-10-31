@@ -524,8 +524,8 @@ export const sampleQuizData = [
       "Physiological longevity < Ecological longevity",
       "a or b"
     ],
-    "correct": "Physiological longevity > Ecological longevity",
-    "explanation": "Physiological longevity is the maximum possible lifespan under ideal conditions, while ecological longevity is the actual lifespan in nature, which is often shorter due to environmental factors."
+    "correct": "a or b",
+    "explanation": "Physiological longevity is usually greater than ecological longevity, but in rare ideal cases, they can be equal. This is why both '>' and '=' are possible, making option 'a or b' correct."
   },
   {
     "question": "A sampling procedure such that each possible combination of sampling units out of the population has the same chance of being selected is referred to as",
