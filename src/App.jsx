@@ -34,8 +34,13 @@ export default function App() {
     setIsAnswerChecked(false);
     setIsCorrect(false);
     
-    // Shuffle the questions
-    const shuffledQuizData = [...sampleQuizData].sort(() => Math.random() - 0.5);
+    // Shuffle the questions and their options
+    const shuffledQuizData = [...sampleQuizData]
+      .sort(() => Math.random() - 0.5)
+      .map(question => ({
+        ...question,
+        options: [...question.options].sort(() => Math.random() - 0.5),
+      }));
     setQuizData(shuffledQuizData);
     
     // Reset user answers
