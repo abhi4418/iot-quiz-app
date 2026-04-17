@@ -306,11 +306,6 @@ export default function App() {
     }
   };
 
-  // Show explanation
-  const toggleExplanation = () => {
-    setShowExplanation(!showExplanation);
-  };
-  
   // If quiz data hasn't loaded yet
   if (quizData.length === 0) {
     return <div className="flex justify-center items-center h-screen">Loading quiz...</div>;
