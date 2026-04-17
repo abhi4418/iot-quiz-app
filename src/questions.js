@@ -10,7 +10,7 @@ export const sampleQuizData = [
       "education"
     ],
     "correct": "education",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Consumptive value comes from directly using or extracting forest goods; education is an indirect, non-consumptive benefit."
   },
   {
     "week": 1,
@@ -23,7 +23,7 @@ export const sampleQuizData = [
       "moist deciduous forests"
     ],
     "correct": "broadleaved forests",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Tropical moist forest types include wet evergreen, semi-evergreen, and moist deciduous forests; broadleaved forests are a broader structural category."
   },
   {
     "week": 1,
@@ -36,7 +36,7 @@ export const sampleQuizData = [
       "dry evergreen forests"
     ],
     "correct": "semi-evergreen forests",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Montane sub-tropical forests include broadleaved hill, pine, and dry evergreen types; semi-evergreen forests belong to tropical moist forests."
   },
   {
     "week": 1,
@@ -49,7 +49,7 @@ export const sampleQuizData = [
       "dictionary meaning"
     ],
     "correct": "dictionary meaning",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "The Supreme Court interpreted forest in its ordinary dictionary sense so that protection is not limited by technical or ownership definitions."
   },
   {
     "week": 1,
@@ -62,12 +62,12 @@ export const sampleQuizData = [
       "existence value"
     ],
     "correct": "existence value",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Use values come from actual or potential use of a resource, while existence value is a non-use value based on knowing it exists."
   },
   {
     "week": 1,
     "number": 6,
-    "question": "The value of leaving use and non-use values for offspring\u2019s or future generations is called",
+    "question": "The value of leaving use and non-use values for offspring’s or future generations is called",
     "options": [
       "altruistic value",
       "bequest value",
@@ -75,7 +75,7 @@ export const sampleQuizData = [
       "option value"
     ],
     "correct": "bequest value",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Bequest value is the value of conserving resources so future generations can benefit from them."
   },
   {
     "week": 1,
@@ -88,7 +88,7 @@ export const sampleQuizData = [
       "bequest value"
     ],
     "correct": "direct value",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Direct value is obtained from direct use of a resource, so it is a use value rather than a non-use value."
   },
   {
     "week": 1,
@@ -101,7 +101,7 @@ export const sampleQuizData = [
       "any area recorded as forest in the Government record irrespective of ownership"
     ],
     "correct": "any area recorded as forest in the Government record irrespective of ownership",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Forest land includes any area recorded as forest in government records, regardless of who owns it."
   },
   {
     "week": 1,
@@ -114,7 +114,7 @@ export const sampleQuizData = [
       "Alpine"
     ],
     "correct": "Mediterranean dry",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "India's forest classification includes tropical, montane temperate, sub-alpine, and alpine types; Mediterranean dry forest is not an Indian forest type."
   },
   {
     "week": 1,
@@ -127,7 +127,7 @@ export const sampleQuizData = [
       "Greek foris meaning trees"
     ],
     "correct": "Latin foris meaning outside",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "The word forest is traced to Latin 'foris', meaning outside, referring historically to land outside settled areas."
   },
   {
     "week": 2,
@@ -140,7 +140,7 @@ export const sampleQuizData = [
       "water"
     ],
     "correct": "water",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Abiotic factors are non-living parts of the environment; water is non-living, unlike vines, trees, and reptiles."
   },
   {
     "week": 2,
@@ -153,7 +153,7 @@ export const sampleQuizData = [
       "catastrophic climax"
     ],
     "correct": "catastrophic climax",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "A catastrophic climax is maintained or created by severe disturbances such as wildfires, storms, or floods."
   },
   {
     "week": 2,
@@ -166,7 +166,7 @@ export const sampleQuizData = [
       "silvics"
     ],
     "correct": "silvics",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Silvics studies the life history and environmental requirements of forest trees and crops."
   },
   {
     "week": 2,
@@ -179,7 +179,7 @@ export const sampleQuizData = [
       "silvics"
     ],
     "correct": "silviculture",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Silviculture is the art and science of establishing, growing, tending, and regenerating forest crops."
   },
   {
     "week": 2,
@@ -192,7 +192,7 @@ export const sampleQuizData = [
       "short life span"
     ],
     "correct": "large size",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Pioneer species are usually hardy, fast-growing, and short-lived; large size is not a typical pioneer trait."
   },
   {
     "week": 2,
@@ -205,7 +205,7 @@ export const sampleQuizData = [
       "none of these"
     ],
     "correct": "photosynthesis = respiration",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "At the compensation point, photosynthetic gain exactly equals respiratory loss, so net carbon gain is zero."
   },
   {
     "week": 2,
@@ -215,10 +215,10 @@ export const sampleQuizData = [
       "APAR + LUE",
       "APAR X LUE",
       "APAR - LUE",
-      "APAR \u00f7 LUE"
+      "APAR ÷ LUE"
     ],
     "correct": "APAR X LUE",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Net primary productivity is commonly estimated as absorbed photosynthetically active radiation multiplied by light-use efficiency."
   },
   {
     "week": 2,
@@ -231,7 +231,7 @@ export const sampleQuizData = [
       "halosere"
     ],
     "correct": "xerosere",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "A lithosere begins on bare rock, which is a dry habitat, so it is a type of xerosere."
   },
   {
     "week": 2,
@@ -244,7 +244,7 @@ export const sampleQuizData = [
       "forest protection"
     ],
     "correct": "forest management",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Forest management applies scientific, technical, and economic principles to plan and control forest use and production."
   },
   {
     "week": 2,
@@ -257,7 +257,7 @@ export const sampleQuizData = [
       "secondary nutrient"
     ],
     "correct": "micronutrient",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Boron is essential for plants but needed only in trace amounts, which makes it a micronutrient."
   },
   {
     "week": 3,
@@ -270,7 +270,7 @@ export const sampleQuizData = [
       "none of the above"
     ],
     "correct": "physical weathering",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Thermal expansion and contraction break rocks mechanically without changing their chemistry, so they cause physical weathering."
   },
   {
     "week": 3,
@@ -283,7 +283,7 @@ export const sampleQuizData = [
       "none of the above"
     ],
     "correct": "physical weathering",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Cryofracturing is freeze-thaw breakage, a mechanical process caused by expanding ice in cracks."
   },
   {
     "week": 3,
@@ -296,7 +296,7 @@ export const sampleQuizData = [
       "none of the above"
     ],
     "correct": "chemical weathering",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Carbonation involves carbonic acid reacting with minerals, so it is chemical weathering."
   },
   {
     "week": 3,
@@ -309,7 +309,7 @@ export const sampleQuizData = [
       "red and yellow soil"
     ],
     "correct": "alluvial soil",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Khadar is the newer alluvial soil deposited on active floodplains."
   },
   {
     "week": 3,
@@ -322,7 +322,7 @@ export const sampleQuizData = [
       "red and yellow soil"
     ],
     "correct": "black cotton soil",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Black cotton soils shrink and swell strongly, producing cracks and a self-ploughing effect."
   },
   {
     "week": 3,
@@ -335,7 +335,7 @@ export const sampleQuizData = [
       "substratum layer"
     ],
     "correct": "substratum layer",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "The C horizon is the weathered parent material or substratum below the main topsoil and subsoil layers."
   },
   {
     "week": 3,
@@ -348,7 +348,7 @@ export const sampleQuizData = [
       "all of the above"
     ],
     "correct": "all of the above",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Soil formation depends on climate, organisms and vegetation, parent material, relief, and time."
   },
   {
     "week": 3,
@@ -361,7 +361,7 @@ export const sampleQuizData = [
       "red and yellow soil"
     ],
     "correct": "black cotton soil",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Regur is another name for black cotton soil, common in basalt-derived regions."
   },
   {
     "week": 3,
@@ -374,7 +374,7 @@ export const sampleQuizData = [
       "none of the above"
     ],
     "correct": "physical weathering",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Wave action abrades and breaks rock mechanically, which is physical weathering."
   },
   {
     "week": 3,
@@ -387,7 +387,7 @@ export const sampleQuizData = [
       "red and yellow soil"
     ],
     "correct": "alluvial soil",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Bangar is older alluvial soil found above the active floodplain."
   },
   {
     "week": 4,
@@ -400,7 +400,7 @@ export const sampleQuizData = [
       "20% of tree height"
     ],
     "correct": "breast height",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "False form factor uses the breast-height sectional area as the base of the comparison cylinder."
   },
   {
     "week": 4,
@@ -413,12 +413,12 @@ export const sampleQuizData = [
       "2.47 m"
     ],
     "correct": "1.37 m",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "In Indian forestry practice, diameter at breast height is measured at 1.37 m above ground."
   },
   {
     "week": 4,
     "number": 3,
-    "question": "3 trees are located in a sample plot of 15 m \u00d7 15 m. Their dbh are as under: dbh = 25 cm, 30 cm, 35 cm Find the stand basal area in sq m per Ha.",
+    "question": "3 trees are located in a sample plot of 15 m × 15 m. Their dbh are as under: dbh = 25 cm, 30 cm, 35 cm Find the stand basal area in sq m per Ha.",
     "options": [
       "9.6",
       "14.6",
@@ -426,7 +426,7 @@ export const sampleQuizData = [
       "27.6"
     ],
     "correct": "9.6",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "The summed basal area is about 0.216 sq m in 225 sq m; scaling to one hectare gives about 9.6 sq m per ha."
   },
   {
     "week": 4,
@@ -439,12 +439,12 @@ export const sampleQuizData = [
       "indirect measurement"
     ],
     "correct": "indirect measurement",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Using similar triangles estimates height from geometry instead of measuring the tree directly, so it is indirect measurement."
   },
   {
     "week": 4,
     "number": 5,
-    "question": "In a triangle, the angle between base and hypotenuse, \u03b8 = 60\u00b0 and the hypotenuse c = 2 cm. Find the length of the base b.",
+    "question": "In a triangle, the angle between base and hypotenuse, θ = 60° and the hypotenuse c = 2 cm. Find the length of the base b.",
     "options": [
       "0.33",
       "0.5",
@@ -452,7 +452,7 @@ export const sampleQuizData = [
       "1"
     ],
     "correct": "1",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "The base is c cos theta, so 2 x cos 60 degrees equals 1 cm."
   },
   {
     "week": 4,
@@ -465,7 +465,7 @@ export const sampleQuizData = [
       ".195"
     ],
     "correct": ".049",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Basal area is pi d squared by 4; with d = 0.25 m, the value is about 0.049 sq m."
   },
   {
     "week": 4,
@@ -478,7 +478,7 @@ export const sampleQuizData = [
       "20% of tree height"
     ],
     "correct": "10% of tree height",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Normal form factor uses the cross-section at one-tenth of total tree height as the reference base."
   },
   {
     "week": 4,
@@ -491,7 +491,7 @@ export const sampleQuizData = [
       ".195"
     ],
     "correct": ".096",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Basal area is pi d squared by 4; with d = 0.35 m, the value is about 0.096 sq m."
   },
   {
     "week": 4,
@@ -500,11 +500,11 @@ export const sampleQuizData = [
     "options": [
       "dob = dub + tb",
       "dob = dub - tb",
-      "dob = dub + 2 \u00d7 tb",
-      "dob = dub - 2 \u00d7 tb"
+      "dob = dub + 2 × tb",
+      "dob = dub - 2 × tb"
     ],
-    "correct": "dob = dub + 2 \u00d7 tb",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "correct": "dob = dub + 2 × tb",
+    "explanation": "Bark thickness occurs on both sides of the stem, so outside diameter equals under-bark diameter plus twice the bark thickness."
   },
   {
     "week": 4,
@@ -517,7 +517,7 @@ export const sampleQuizData = [
       "data insufficient"
     ],
     "correct": "10",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Spacing factor is spacing divided by diameter; 3 m divided by 0.30 m equals 10."
   },
   {
     "week": 5,
@@ -530,7 +530,7 @@ export const sampleQuizData = [
       "2000 m"
     ],
     "correct": "1500 m",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "LiDAR distance is half the light travel distance: 3 x 10^8 m/s times 0.00001 s divided by 2 equals 1500 m."
   },
   {
     "week": 5,
@@ -543,12 +543,12 @@ export const sampleQuizData = [
       "Multistage sampling"
     ],
     "correct": "Simple random sampling",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Simple random sampling gives every possible combination of sampling units an equal chance of selection."
   },
   {
     "week": 5,
     "number": 3,
-    "question": "\u201cThis sampling employs a simple rule of selecting every k unit starting with a number chosen at random from 1 th to k as the random start.\u201d We're talking about",
+    "question": "“This sampling employs a simple rule of selecting every k unit starting with a number chosen at random from 1 th to k as the random start.” We're talking about",
     "options": [
       "Simple random sampling",
       "Systematic sampling",
@@ -556,7 +556,7 @@ export const sampleQuizData = [
       "Multistage sampling"
     ],
     "correct": "Systematic sampling",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Systematic sampling selects every kth unit after choosing a random starting point."
   },
   {
     "week": 5,
@@ -569,7 +569,7 @@ export const sampleQuizData = [
       "population"
     ],
     "correct": "frame",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "A sampling frame is the complete list of units from which a sample can be selected."
   },
   {
     "week": 5,
@@ -582,7 +582,7 @@ export const sampleQuizData = [
       "Variance"
     ],
     "correct": "Accuracy",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Accuracy describes closeness to the true or accepted value."
   },
   {
     "week": 5,
@@ -595,7 +595,7 @@ export const sampleQuizData = [
       "green light"
     ],
     "correct": "green light",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Green light penetrates water better than infrared wavelengths, so bathymetric LiDAR uses green light for depth measurement."
   },
   {
     "week": 5,
@@ -608,7 +608,7 @@ export const sampleQuizData = [
       "Variance"
     ],
     "correct": "Precision",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Precision describes how closely repeated measurements agree with one another."
   },
   {
     "week": 5,
@@ -621,7 +621,7 @@ export const sampleQuizData = [
       "Inertial measurement unit"
     ],
     "correct": "Inertial measurement unit",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "IMU expands to inertial measurement unit, a sensor package that measures motion and orientation."
   },
   {
     "week": 5,
@@ -634,7 +634,7 @@ export const sampleQuizData = [
       "radiometric resolution"
     ],
     "correct": "temporal resolution",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Flyover frequency determines how often an area is observed, which is temporal resolution."
   },
   {
     "week": 5,
@@ -647,7 +647,7 @@ export const sampleQuizData = [
       "Geodetic surveying takes into account the true shape of the Earth and is used for larger areas (> 250 sq km)"
     ],
     "correct": "Geodetic surveying takes into account the true shape of the Earth and is used for larger areas (> 250 sq km)",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Geodetic surveying accounts for Earth's curvature and is used for large areas where plane assumptions become inaccurate."
   },
   {
     "week": 6,
@@ -660,7 +660,7 @@ export const sampleQuizData = [
       "human over-population"
     ],
     "correct": "habitat enhancement",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "HIPPO stands for habitat loss, invasive species, pollution, human population, and overharvesting; habitat enhancement is not one of the threats."
   },
   {
     "week": 6,
@@ -673,7 +673,7 @@ export const sampleQuizData = [
       "the trap is not a weapon and capturing is not hunting."
     ],
     "correct": "the trap is a weapon and capturing is hunting.",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Under the Wildlife Protection Act context, trapping equipment is treated as a weapon and capturing a wild animal counts as hunting."
   },
   {
     "week": 6,
@@ -686,7 +686,7 @@ export const sampleQuizData = [
       "diseases"
     ],
     "correct": "death rate",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Death rate is a demographic rate with a predictable effect on population size, making it deterministic."
   },
   {
     "week": 6,
@@ -699,7 +699,7 @@ export const sampleQuizData = [
       "pollution"
     ],
     "correct": "pollination",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Pollination is an ecological process, while HIPPO lists major biodiversity threats such as habitat loss, invasive species, pollution, population, and overharvesting."
   },
   {
     "week": 6,
@@ -712,7 +712,7 @@ export const sampleQuizData = [
       "none of the above"
     ],
     "correct": "technology",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "In the I = P x A x T identity, T represents the impact of technology."
   },
   {
     "week": 6,
@@ -725,7 +725,7 @@ export const sampleQuizData = [
       "firestorm"
     ],
     "correct": "ladder fire",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Invasive climbers act as vertical fuel ladders that carry fire from the ground layer into the canopy."
   },
   {
     "week": 6,
@@ -738,7 +738,7 @@ export const sampleQuizData = [
       "forest fire"
     ],
     "correct": "forest fire",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "A forest fire is a chance disturbance whose timing and severity are often unpredictable, so it is stochastic."
   },
   {
     "week": 6,
@@ -751,7 +751,7 @@ export const sampleQuizData = [
       "fuel, oxygen, heat"
     ],
     "correct": "fuel, oxygen, heat",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Fire requires fuel, oxygen, and heat; removing any one side of this triangle prevents combustion."
   },
   {
     "week": 6,
@@ -764,7 +764,7 @@ export const sampleQuizData = [
       "none of the above"
     ],
     "correct": "population pressure",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "In the I = P x A x T identity, P represents population or population pressure."
   },
   {
     "week": 6,
@@ -777,7 +777,7 @@ export const sampleQuizData = [
       "the immobilising gun is not a weapon and capturing is not hunting."
     ],
     "correct": "the immobilising gun is a weapon and capturing is hunting.",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "An immobilising gun is a weapon in this context, and capturing a wild animal is included within hunting."
   },
   {
     "week": 7,
@@ -790,7 +790,7 @@ export const sampleQuizData = [
       "drifting"
     ],
     "correct": "dispersal",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Dispersal is the movement of seeds away from the parent plant or seed source to a new location."
   },
   {
     "week": 7,
@@ -803,7 +803,7 @@ export const sampleQuizData = [
       "Mimics natural processes of fire and large-scale insect attacks"
     ],
     "correct": "Increases soil erosion and landslides in hilly areas",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Clear felling can increase runoff, erosion, and landslide risk on slopes, so that is a disadvantage rather than an advantage."
   },
   {
     "week": 7,
@@ -816,7 +816,7 @@ export const sampleQuizData = [
       "artificial regeneration by planting seedlings"
     ],
     "correct": "assisted natural regeneration",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Ring weeding protects naturally established seedlings from nearby competition, which is typical of assisted natural regeneration."
   },
   {
     "week": 7,
@@ -829,7 +829,7 @@ export const sampleQuizData = [
       "maturity age"
     ],
     "correct": "rotation age",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Rotation age is the planned age at which a stand or tree crop is considered ready for final felling."
   },
   {
     "week": 7,
@@ -842,7 +842,7 @@ export const sampleQuizData = [
       "good control over genetic improvement"
     ],
     "correct": "good control over genetic improvement",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Natural regeneration gives less control over parentage and spacing, while genetic improvement is easier in artificial regeneration."
   },
   {
     "week": 7,
@@ -855,7 +855,7 @@ export const sampleQuizData = [
       "any stage of life"
     ],
     "correct": "any stage of life",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Tending includes operations that care for the crop through its life, from young regeneration to later stand stages."
   },
   {
     "week": 7,
@@ -868,7 +868,7 @@ export const sampleQuizData = [
       "Regeneration -> Harvesting -> Stand tending"
     ],
     "correct": "Harvesting -> Regeneration -> Stand tending",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "A silvicultural system removes the old crop, establishes regeneration, and then tends the developing stand."
   },
   {
     "week": 7,
@@ -881,7 +881,7 @@ export const sampleQuizData = [
       "artificial regeneration with hunters and gatherers"
     ],
     "correct": "artificial regeneration with villagers",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Taungya is artificial regeneration carried out with villagers, often combining tree planting with temporary cultivation."
   },
   {
     "week": 7,
@@ -894,7 +894,7 @@ export const sampleQuizData = [
       "artificial regeneration by transplanting trees"
     ],
     "correct": "natural regeneration",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Natural regeneration depends on seed supply, germination, and establishment, so it usually cannot restore a clear-cut site quickly."
   },
   {
     "week": 7,
@@ -907,7 +907,7 @@ export const sampleQuizData = [
       "high requirement of heavy machinery and labour"
     ],
     "correct": "high requirement of heavy machinery and labour",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Natural regeneration normally needs less machinery and labour than planting or transplanting, so high machinery demand is not its feature."
   },
   {
     "week": 8,
@@ -920,7 +920,7 @@ export const sampleQuizData = [
       "perpendicular to gaps"
     ],
     "correct": "centrifugally around gaps",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "In group shelterwood, regeneration starts in gaps and the openings are widened outward, i.e. centrifugally."
   },
   {
     "week": 8,
@@ -933,7 +933,7 @@ export const sampleQuizData = [
       "Preparatory felling -> Seeding felling -> Secondary felling -> Final felling"
     ],
     "correct": "Preparatory felling -> Seeding felling -> Secondary felling -> Final felling",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "The shelterwood sequence prepares the stand, induces seeding, gradually removes shelter, and finally removes the old crop."
   },
   {
     "week": 8,
@@ -946,7 +946,7 @@ export const sampleQuizData = [
       "uneven aged stand with artificial aesthetics"
     ],
     "correct": "even aged stand with natural aesthetics",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Shelterwood regeneration produces a mostly even-aged crop while retaining canopy shelter long enough to preserve natural appearance."
   },
   {
     "week": 8,
@@ -959,7 +959,7 @@ export const sampleQuizData = [
       "group shelterwood system"
     ],
     "correct": "selection system",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Selection systems maintain continuous forest cover, which is useful in catchments where soil and water protection are priorities."
   },
   {
     "week": 8,
@@ -972,7 +972,7 @@ export const sampleQuizData = [
       "final felling"
     ],
     "correct": "preparatory felling",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Preparatory felling removes poor or non-increment trees to improve the seed-bearing stand before regeneration begins."
   },
   {
     "week": 8,
@@ -985,7 +985,7 @@ export const sampleQuizData = [
       "final felling"
     ],
     "correct": "secondary felling",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Secondary felling opens the canopy after regeneration appears, giving young plants more light and growing space."
   },
   {
     "week": 8,
@@ -998,7 +998,7 @@ export const sampleQuizData = [
       "90-120 years"
     ],
     "correct": "30-60 years",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "With a 120-year rotation divided into four 30-year period blocks, PB-III corresponds to the 30-60 year age class."
   },
   {
     "week": 8,
@@ -1011,7 +1011,7 @@ export const sampleQuizData = [
       "plateau areas"
     ],
     "correct": "shade bearer species",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Clear felling exposes the site to full light, which is unsuitable for shade-bearing species that need shelter during establishment."
   },
   {
     "week": 8,
@@ -1024,7 +1024,7 @@ export const sampleQuizData = [
       "group shelterwood system"
     ],
     "correct": "selection system",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Selection forestry keeps uneven-aged, continuous cover stands, making it closer to natural forest structure."
   },
   {
     "week": 8,
@@ -1037,7 +1037,7 @@ export const sampleQuizData = [
       "group shelterwood system"
     ],
     "correct": "selection system",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Selection forests usually have many small trees and progressively fewer large trees, producing an inverse-J diameter curve."
   },
   {
     "week": 9,
@@ -1050,7 +1050,7 @@ export const sampleQuizData = [
       "logging"
     ],
     "correct": "marking",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Marking is the field selection and marking of trees to be felled or retained according to the management prescription."
   },
   {
     "week": 9,
@@ -1063,7 +1063,7 @@ export const sampleQuizData = [
       "delimbing"
     ],
     "correct": "skidding",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Skidding is the movement of felled logs from the stump area to a landing or collection point."
   },
   {
     "week": 9,
@@ -1076,7 +1076,7 @@ export const sampleQuizData = [
       "V2-V1+H-I-M"
     ],
     "correct": "V2-V1+H-I",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Net growth in initial volume adds harvested volume to the change in standing volume and subtracts ingrowth, giving V2 - V1 + H - I."
   },
   {
     "week": 9,
@@ -1089,7 +1089,7 @@ export const sampleQuizData = [
       "logging"
     ],
     "correct": "cruising",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Timber cruising estimates the location, volume, and quality of standing timber before harvest or sale."
   },
   {
     "week": 9,
@@ -1102,7 +1102,7 @@ export const sampleQuizData = [
       "all of these"
     ],
     "correct": "conventional face",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "The conventional face is the standard face cut and is comparatively easy to lay out accurately with ordinary felling cuts."
   },
   {
     "week": 9,
@@ -1115,7 +1115,7 @@ export const sampleQuizData = [
       "white"
     ],
     "correct": "blue",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "In the marking colour convention used here, blue marks trees that are to be retained."
   },
   {
     "week": 9,
@@ -1128,7 +1128,7 @@ export const sampleQuizData = [
       "delimbing"
     ],
     "correct": "bucking",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Bucking is cross-cutting felled stems into logs of required lengths."
   },
   {
     "week": 9,
@@ -1141,7 +1141,7 @@ export const sampleQuizData = [
       "white"
     ],
     "correct": "white",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "In the marking colour convention used here, white is used for research plots."
   },
   {
     "week": 9,
@@ -1154,7 +1154,7 @@ export const sampleQuizData = [
       "white"
     ],
     "correct": "red",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "In the marking colour convention used here, red is used to show boundary trees."
   },
   {
     "week": 9,
@@ -1167,7 +1167,7 @@ export const sampleQuizData = [
       "all of these"
     ],
     "correct": "humboldt face",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "A Humboldt face removes the wedge mainly from the stump side, leaving more usable wood in the log."
   },
   {
     "week": 10,
@@ -1180,7 +1180,7 @@ export const sampleQuizData = [
       "low moisture, low temperature"
     ],
     "correct": "low moisture, low temperature",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Low moisture and low temperature slow seed respiration, fungal growth, and loss of viability during storage."
   },
   {
     "week": 10,
@@ -1193,7 +1193,7 @@ export const sampleQuizData = [
       "stone wall fencing"
     ],
     "correct": "live fencing",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Agave has dense, spiny growth, making it suitable as a living barrier or live fence."
   },
   {
     "week": 10,
@@ -1206,7 +1206,7 @@ export const sampleQuizData = [
       "all of these"
     ],
     "correct": "sunken bed",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Sunken beds collect runoff and reduce water loss around seedlings, helping conserve moisture."
   },
   {
     "week": 10,
@@ -1219,7 +1219,7 @@ export const sampleQuizData = [
       "teak"
     ],
     "correct": "ber",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Ber has a hard seed covering, and shell cracking helps overcome this physical barrier to germination."
   },
   {
     "week": 10,
@@ -1232,7 +1232,7 @@ export const sampleQuizData = [
       "chemical analysis of fat and nitrogen content"
     ],
     "correct": "colour of fruits",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Fruit colour is a field maturity indicator, whereas dry weight, moisture, and chemical composition are laboratory checks."
   },
   {
     "week": 10,
@@ -1245,7 +1245,7 @@ export const sampleQuizData = [
       "none of these"
     ],
     "correct": "soil depth < 10 cm",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Refractory sites are very difficult for planting because extremely shallow soil, such as less than 10 cm, limits rooting and moisture storage."
   },
   {
     "week": 10,
@@ -1258,7 +1258,7 @@ export const sampleQuizData = [
       "all of these"
     ],
     "correct": "raised bed",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Raised beds lift seedlings above saturated soil and improve drainage, reducing water logging."
   },
   {
     "week": 10,
@@ -1271,7 +1271,7 @@ export const sampleQuizData = [
       "teak"
     ],
     "correct": "teak",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Teak fruits have dormancy, and alternating wet and dry treatment helps weaken the covering and improve germination."
   },
   {
     "week": 10,
@@ -1284,7 +1284,7 @@ export const sampleQuizData = [
       "all of these"
     ],
     "correct": "all of these",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Plantation spacing must match the objective, site, species, and expected growth, so all listed factors matter."
   },
   {
     "week": 10,
@@ -1297,7 +1297,7 @@ export const sampleQuizData = [
       "germination power"
     ],
     "correct": "germination energy",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Germination energy measures the percentage of seeds that germinate up to the peak germination period, indicating early vigour."
   },
   {
     "week": 11,
@@ -1310,7 +1310,7 @@ export const sampleQuizData = [
       "ex-situ preservation"
     ],
     "correct": "ex-situ conservation",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Zoos conserve animals outside their natural habitats, which is ex-situ conservation."
   },
   {
     "week": 11,
@@ -1323,7 +1323,7 @@ export const sampleQuizData = [
       "ex-situ preservation"
     ],
     "correct": "ex-situ conservation",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Captive breeding maintains and breeds species outside their natural habitat, so it is ex-situ conservation."
   },
   {
     "week": 11,
@@ -1336,7 +1336,7 @@ export const sampleQuizData = [
       "all of the above"
     ],
     "correct": "all of the above",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "The elephant can be umbrella, keystone, and flagship: it needs large habitat, strongly affects ecosystems, and attracts public support."
   },
   {
     "week": 11,
@@ -1349,7 +1349,7 @@ export const sampleQuizData = [
       "none of the above"
     ],
     "correct": "conservation",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Conservation allows wise and sustainable use of resources, unlike preservation, which emphasizes minimal human interference."
   },
   {
     "week": 11,
@@ -1362,7 +1362,7 @@ export const sampleQuizData = [
       "major forest"
     ],
     "correct": "major forest",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "The 1894 policy used classes such as protection, production, and minor forests; major forest is not one of those classes."
   },
   {
     "week": 11,
@@ -1375,7 +1375,7 @@ export const sampleQuizData = [
       "all of the above"
     ],
     "correct": "all of the above",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "The tiger can be umbrella, keystone, and flagship because it needs large habitat, regulates prey communities, and draws public attention."
   },
   {
     "week": 11,
@@ -1388,7 +1388,7 @@ export const sampleQuizData = [
       "agroforestry"
     ],
     "correct": "extension forestry",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Extension forestry includes tree planting outside conventional forests, such as along roads, canals, and railway lines."
   },
   {
     "week": 11,
@@ -1401,7 +1401,7 @@ export const sampleQuizData = [
       "Uttarakhand"
     ],
     "correct": "Uttarakhand",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Van Panchayats were established in the Kumaon region, which is now part of Uttarakhand."
   },
   {
     "week": 11,
@@ -1414,7 +1414,7 @@ export const sampleQuizData = [
       "extinct species"
     ],
     "correct": "flagship species",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Orchids attract public interest and support for conservation, which is the role of a flagship species."
   },
   {
     "week": 11,
@@ -1427,7 +1427,7 @@ export const sampleQuizData = [
       "extinct species"
     ],
     "correct": "keystone species",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Fig trees provide food during scarcity and therefore have a disproportionately important ecological role as keystone species."
   },
   {
     "week": 12,
@@ -1440,12 +1440,12 @@ export const sampleQuizData = [
       "catastrophic climax"
     ],
     "correct": "disclimax",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "A disclimax is a community kept from the climatic climax by repeated disturbance such as grazing by cattle."
   },
   {
     "week": 12,
     "number": 2,
-    "question": "\u201cScience of relationships between organisms and their environments\u201d is the definition of:",
+    "question": "“Science of relationships between organisms and their environments” is the definition of:",
     "options": [
       "conservation",
       "preservation",
@@ -1453,12 +1453,12 @@ export const sampleQuizData = [
       "ecology"
     ],
     "correct": "ecology",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Ecology is the study of relationships between organisms and their physical and biological environments."
   },
   {
     "week": 12,
     "number": 3,
-    "question": "\u201callowing some places and some creatures to exist without significant human interference\u201d is a definition of",
+    "question": "“allowing some places and some creatures to exist without significant human interference” is a definition of",
     "options": [
       "conservation",
       "preservation",
@@ -1466,7 +1466,7 @@ export const sampleQuizData = [
       "all of these"
     ],
     "correct": "preservation",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Preservation means allowing species or places to continue with little or no human interference."
   },
   {
     "week": 12,
@@ -1479,7 +1479,7 @@ export const sampleQuizData = [
       "20% of tree height"
     ],
     "correct": "base of the tree",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Absolute form factor compares tree volume with a cylinder whose base is the tree's basal area at ground level."
   },
   {
     "week": 12,
@@ -1492,7 +1492,7 @@ export const sampleQuizData = [
       "red and yellow soil"
     ],
     "correct": "peaty soil",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Peaty soils contain large amounts of partially decomposed plant material, so their organic matter content is highest."
   },
   {
     "week": 12,
@@ -1505,12 +1505,12 @@ export const sampleQuizData = [
       "0.4"
     ],
     "correct": "0.4",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Artificial form factor equals stem volume divided by breast-height basal area times height; 1.78 divided by about 4.41 is roughly 0.4."
   },
   {
     "week": 12,
     "number": 7,
-    "question": "\u201cPlant community, predominantly comprised of trees and other woody vegetation, usually with a closed canopy\" is",
+    "question": "“Plant community, predominantly comprised of trees and other woody vegetation, usually with a closed canopy\" is",
     "options": [
       "silvicultural definition of forests",
       "FAO definition of forests",
@@ -1518,7 +1518,7 @@ export const sampleQuizData = [
       "ecological definition of forests"
     ],
     "correct": "ecological definition of forests",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "This definition emphasizes the forest as a plant community of trees and woody vegetation with canopy closure, which is ecological."
   },
   {
     "week": 12,
@@ -1531,7 +1531,7 @@ export const sampleQuizData = [
       "infertile"
     ],
     "correct": "brick",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "Laterite comes from Latin 'later', meaning brick, referring to the brick-like hardening and colour of lateritic soil."
   },
   {
     "week": 12,
@@ -1544,7 +1544,7 @@ export const sampleQuizData = [
       "None of these is a correct statement."
     ],
     "correct": "For a non-circular cross-section, girth tape over-estimates the sectional area.",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "For a given girth, a circle has the maximum area; using girth tape as if the section were circular therefore overestimates non-circular sections."
   },
   {
     "week": 12,
@@ -1557,6 +1557,6 @@ export const sampleQuizData = [
       "soil science"
     ],
     "correct": "soil profile",
-    "explanation": "The answer is marked in bold in the source PDF."
+    "explanation": "A soil profile is the vertical arrangement of soil horizons from the surface downward."
   }
 ];
